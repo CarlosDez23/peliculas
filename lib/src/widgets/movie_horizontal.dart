@@ -69,7 +69,7 @@ class MovieHorizontal extends StatelessWidget {
   // }
 
   Widget _createCard(BuildContext context, Pelicula pelicula){
-    return Container(
+    final movieCard = Container(
         margin: EdgeInsets.only(right:15.0),
         child: Column(
           children: [
@@ -92,5 +92,13 @@ class MovieHorizontal extends StatelessWidget {
           ],
         )
       );
+    return GestureDetector(
+      onTap: (){
+        //Le pasamos la película a la otra página
+        Navigator.pushNamed(context, 'detail', arguments: pelicula);
+      },
+      child: movieCard,
+
+    );
   }
 }
