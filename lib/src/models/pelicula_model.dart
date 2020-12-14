@@ -75,4 +75,14 @@ class Pelicula {
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
     } 
   }
+
+  String getBackgroundImg(){
+    if(backdropPath == null){
+      return 'https://www.fasionrouse.com/wp-content/themes/gecko/assets/images/placeholder.png';
+    }else{
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
+    } 
+  }
+
+  
 }

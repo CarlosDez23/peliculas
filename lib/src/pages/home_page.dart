@@ -77,6 +77,7 @@ class HomePage extends StatelessWidget {
                 return MovieHorizontal(
                   peliculas: snapshot.data,
                   //Le pasamos la función que llama al provider de películas entonces en el listener la va a ejecutar
+                  //Le pasamos solo la referencia, por eso no lo pasamos con (), porque si no se ejecutaría
                   nextPage : peliculasProvider.getPopulares,
                 );
               }else{
