@@ -59,6 +59,16 @@ class PeliculasProvider{
     return peliculas.items;
   }
 
+  Future<List<Pelicula>> searchMovie (String query) async{
+    final url = Uri.https(_url, '3/search/movie',{
+      //queryParameters
+      'api_key'  : _apikey,
+      'language' : _language,
+      'query'    : query,
+    });
+    return await _handleResponse(url);
+  }
+
   //Cerramos el stream
   void  disposeStream(){
     _popularesStreamController?.close();

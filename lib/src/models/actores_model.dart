@@ -48,17 +48,17 @@ class Actor {
 
   Actor.fromJsonMap(Map<String, dynamic> json){
     adult              = json["adult"];
-    gender             = json["gender"].cast<int>();
-    id                 = json["id"].cast<int>();
+    gender             = json["gender"];
+    id                 = json["id"];
     knownForDepartment = json["known_for_department"];
     name               = json["name"];
     originalName       = json["original_name"];
     popularity         = json["popularity"];
     profilePath        = json["profile_path"];
-    castId             = json["cast_id"].cast<int>();
+    castId             = json["cast_id"];
     character          = json["character"];
     creditId           = json["credit_id"];
-    order              = json["order"].cast<int>();
+    order              = json["order"];
     department         = json["department"];
     job                = json["job"];
   }

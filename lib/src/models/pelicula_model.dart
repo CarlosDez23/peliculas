@@ -33,6 +33,8 @@ class Pelicula {
   double voteAverage;
   int voteCount;
 
+  String uniqueId;
+
   Pelicula({
     this.adult,
     this.backdropPath,

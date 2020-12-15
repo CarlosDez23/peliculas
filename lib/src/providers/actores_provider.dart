@@ -10,7 +10,7 @@ class ActoresProvider{
   String _url = 'api.themoviedb.org';
   String _language = 'es-ES';
 
-  Future<List<Actor>> getMovieCasting(int movieId) async{
+  Future<List<Actor>> getMovieCasting(String movieId) async{
 
     final url = Uri.https(_url, '3/movie/$movieId/credits',{
       'api_key' : _apikey,
